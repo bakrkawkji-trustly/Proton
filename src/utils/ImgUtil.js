@@ -18,7 +18,7 @@ export default {
      * @param {Proton.Rectangle}    rect
      */
     getImageData(context, image, rect) {
-        context.drawImage(image, rect.x, rect.y);
+        context.drawImage(image, rect.x, rect.y, rect.width, rect.height);
         const imagedata = context.getImageData(rect.x, rect.y, rect.width, rect.height);
         context.clearRect(rect.x, rect.y, rect.width, rect.height);
 
